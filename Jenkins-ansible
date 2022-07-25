@@ -10,7 +10,7 @@ pipeline{
     stages{
         stage("Git Checkout"){
             steps{
-                git credentialsId: 'javahome2', url: 'https://github.com/srinivas1987devops/myweb.git'
+                git credentialsId: 'javahome2', url: 'https://github.com/Nagarjuna1285/myweb.git'
             }
         }
         stage("Maven Build"){
@@ -29,10 +29,10 @@ pipeline{
                             type: 'war'
                        ]
                   ], 
-                  credentialsId: 'nexus3', 
+                  credentialsId: 'nexus2', 
                   groupId: 'in.javahome', 
-                  nexusUrl: '172.31.10.170:8081', 
-                  nexusVersion: 'nexus3', 
+                  nexusUrl: '172.31.25.244:8081', 
+                  nexusVersion: 'nexus2', 
                   protocol: 'http', 
                   repository: 'sample-releases', 
                   version: '8.2.0'  
